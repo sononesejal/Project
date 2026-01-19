@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order | JD SOLUTION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="place-order.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="brand"><span>JD</span> SOLUTION</h1>
+  <button class="back-btn" onclick="goBack()">⬅ Back to Home</button>
+</nav>
+
+<!-- PLACE ORDER FLOW -->
+<section class="order-container">
+
+  <h2>Place Your Order</h2>
+
+  <!-- STEP INDICATOR -->
+  <div class="steps">
+    <span class="active">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+
+  <!-- STEP 1 -->
+   
+
+  <div class="step active" id="step1">
+    <h3>Select Quantity</h3>
+    <p id="productName" class="product-name"></p>
+    <input type="number" id="quantity" placeholder="Enter quantity (kg)" min="1">
+    <button onclick="nextStep(2)">Next</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step" id="step2">
+    <h3>Confirm Delivery Address</h3>
+    <textarea id="address" placeholder="Enter delivery address"></textarea>
+    <button onclick="nextStep(3)">Next</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step" id="step3">
+    <h3>Review Price</h3>
+    <p id="priceInfo"></p>
+    <button onclick="nextStep(4)">Confirm</button>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step" id="step4">
+    <h3>Order Confirmation</h3>
+    <p>Your order is ready to be placed.</p>
+    <button class="place-btn" onclick="placeOrder()">Place Order</button>
+  </div>
+
+</section>
+
+<!-- ORDER HISTORY -->
+<section class="history">
+  <h2>Order History & Tracking</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Product</th>
+        <th>Status</th>
+        <th>Delivery</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#JD101</td>
+        <td>Wheat</td>
+        <td><span class="badge delivered">Delivered</span></td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>#JD102</td>
+        <td>Rice</td>
+        <td><span class="badge transit">In Transit</span></td>
+        <td>Arriving Soon</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<script src="place-order.js"></script>
+</body>
+</html>

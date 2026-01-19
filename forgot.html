@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password | JD Solution</title>
+  <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="bg2.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <!-- Forgot Password Box -->
+  <div class="forgot-container">
+
+    <!-- Brand -->
+    <div class="brand">
+      <img src="logo.png" alt="JD Solution Logo">
+      <h1><span>JD</span> SOLUTION</h1>
+    </div>
+
+    <h2>Forgot Password</h2>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="New Password (8 digits)">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <button onclick="resetPassword()">Reset Password</button>
+
+    <p id="msg"></p>
+
+  </div>
+
+  <script src="forgot.js"></script>
+</body>
+</html>

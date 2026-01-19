@@ -1,0 +1,138 @@
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #2e7d32, #0288d1);
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand span {
+  color: #ffeb3b;
+}
+
+.back-btn {
+  background: white;
+  color: #0288d1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ORDER FLOW */
+.order-container {
+  background: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.order-container h2 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.steps span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #cfd8dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps .active {
+  background: linear-gradient(90deg, #2e7d32, #0288d1);
+  color: white;
+}
+
+/* STEP CONTENT */
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.step input,
+.step textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.step button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #2e7d32, #0288d1);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* HISTORY */
+.history {
+  max-width: 900px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history th,
+.history td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.delivered {
+  background: #2e7d32;
+}
+
+.transit {
+  background: #0288d1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .order-container, .history {
+    margin: 20px;
+  }
+}

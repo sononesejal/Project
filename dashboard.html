@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JD Solution Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="JD Solution Logo" class="logo">
+
+    <!-- Highlighted Brand -->
+    <h1 class="brand"><span>JD</span> SOLUTION</h1>
+
+    <!-- Navigation Links (tight beside title) -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="dashboard.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="place-order.html">Your Orders</a></li>
+      <li><a href="place-order.html">Order History</a></li>
+      <li><a href="#help&support">Help & Support</a></li>
+    </ul>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- Right Profile -->
+  <div class="nav-right">
+    <div class="profile-circle" onclick="openProfile()">
+      👨‍🌾
+      <span class="profile-text">Profile</span>
+    </div>
+  </div>
+
+  <!-- Profile Modal -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProfile()">&times;</span>
+
+      <!-- Profile Form -->
+      <div id="profileForm">
+        <h2>Profile Details</h2>
+        <input type="text" id="buyerName" placeholder="Enter Buyer Name">
+        <input type="text" id="location" placeholder="Default Location">
+        <input type="text" id="businessType" placeholder="Business Type (Retailer/Wholesaler/Household Buyer)">
+        <button onclick="submitProfile()">Submit</button>
+      </div>
+
+      <!-- Profile Info -->
+      <div id="profileInfo" style="display:none;">
+        <h2>Your Profile</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Location:</strong> <span id="displayLocation"></span></p>
+        <p><strong>Business Type:</strong> <span id="displayBusiness"></span></p>
+        <!-- Back to form -->
+        <button class="back-btn" onclick="backToForm()">Back to Form</button>
+        <!-- Back to dashboard -->
+        <button class="dashboard-btn" onclick="closeProfile()">Back to Dashboard</button>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero">
+  <video autoplay muted loop id="heroVideo">
+    <source src="bgdash.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Fresh Farm Products, Direct to You!</h1>
+    <p>Get high-quality farm produce at the best prices. JD SOLUTION connects buyers with farmers directly.</p>
+    <button onclick="window.location.href='dashboard.html'">Shop Now</button>
+  </div>
+</section>
+
+
+<!-- Dashboard content placeholder -->
+<div class="dashboard-content">
+  <!-- Add cards, stats, products here later -->
+</div>
+<!-- Section 1: Location & Delivery Area -->
+<section class="location-section">
+  <div class="container">
+    <h2>Location & Delivery Area</h2>
+    <p>Know your available inventory and nearest supply hub based on your location.</p>
+    
+    <div class="location-cards">
+      <!-- Buyer Location Card -->
+      <div class="card">
+        <h3>Your Delivery Location</h3>
+        <p id="buyerLocation">Detecting...</p>
+        <button onclick="updateLocation()">Update Location</button>
+      </div>
+
+      <!-- Nearest JD Hub Card -->
+      <div class="card">
+        <h3>Nearest JD Supply Hub</h3>
+        <p id="nearestHub">Fetching nearest hub...</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer" id="help&support">
+  <div class="footer-container">
+    <!-- About JD Solution -->
+    <div class="footer-section about">
+      <h3>🌱 JD SOLUTION</h3>
+      <p>Providing fresh farm products directly from farmers to buyers. We ensure quality, affordability, and timely delivery across regions.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Your Orders</a></li>
+        <li><a href="#">Order History</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-section categories">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Seeds</a></li>
+        <li><a href="#">Fertilizers</a></li>
+        <li><a href="#">Farming Tools</a></li>
+        <li><a href="#">Organic Products</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p>📍 456 JD Farm Road, Agriculture City</p>
+      <p>📞 (123) 456-7890</p>
+      <p>✉️ support@jdsolution.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 JD SOLUTION. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i>F</a>
+      <a href="#"><i class="fab fa-twitter"></i>T</a>
+      <a href="#"><i class="fab fa-instagram"></i>I</a>
+      <a href="#"><i class="fab fa-youtube"></i>Y</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="dashboard.js"></script>
+</body>
+</html>

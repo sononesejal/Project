@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video Background */
+#bgVideo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Container */
+.forgot-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  width: 360px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Brand */
+.brand img {
+  width: 85px;
+  margin-bottom: 8px;
+}
+
+.brand h1 {
+  font-size: 26px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00bcd4, #4caf50, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand h1 span {
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Inputs */
+.forgot-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #cfd8dc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.forgot-container input:hover {
+  border-color: #00bcd4;
+}
+
+.forgot-container input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76,175,80,0.4);
+}
+
+/* Button */
+.forgot-container button {
+  width: 100%;
+  padding: 10px;
+  background: #00bcd4;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.forgot-container button:hover {
+  background: #0097a7;
+}
+
+#msg {
+  margin-top: 10px;
+  font-size: 14px;
+}

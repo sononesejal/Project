@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD-SOLUTION LOGIN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="bg-vid.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Login Box -->
+  <div class="login-container">
+    <!-- Logo & Title -->
+<div class="brand">
+  <img src="logo.png" alt="JD Solution Logo">
+  <h1><span>JD</span> SOLUTION</h1>
+</div>
+
+    <h2>Login</h2>
+
+<input type="email" id="user" placeholder="Email">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="sendOTP()">Send OTP</button>
+
+    <!-- OTP Section -->
+    <div id="otpSection">
+      <input type="text" id="otp" placeholder="Enter OTP">
+      <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+
+    <p id="msg"></p>
+
+    <div class="links">
+      <a href="forgot.html">Forgot Password?</a>
+      <p>Not registered? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+  <!-- Footer -->
+
+
+
+  <script src="script.js"></script>
+
+    <footer>
+  <p>“Empowering farmers to sell directly, earn fairly, and grow sustainably.”</p>
+</footer>
+</body>
+
+</html>
